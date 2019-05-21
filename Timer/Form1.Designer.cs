@@ -29,20 +29,19 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.txtEdit = new System.Windows.Forms.TextBox();
+            this.txtNum = new System.Windows.Forms.TextBox();
             this.btnCount = new System.Windows.Forms.Button();
             this.txtCountDown = new System.Windows.Forms.TextBox();
             this.Timer = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
-            // txtEdit
+            // txtNum
             // 
-            this.txtEdit.Location = new System.Drawing.Point(12, 12);
-            this.txtEdit.Name = "txtEdit";
-            this.txtEdit.Size = new System.Drawing.Size(274, 21);
-            this.txtEdit.TabIndex = 0;
-            this.txtEdit.Text = "txtNum";
-            this.txtEdit.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtNum.Location = new System.Drawing.Point(12, 12);
+            this.txtNum.Name = "txtNum";
+            this.txtNum.Size = new System.Drawing.Size(274, 21);
+            this.txtNum.TabIndex = 0;
+            this.txtNum.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // btnCount
             // 
@@ -52,6 +51,7 @@
             this.btnCount.TabIndex = 1;
             this.btnCount.Text = "카운트다운";
             this.btnCount.UseVisualStyleBackColor = true;
+            this.btnCount.Click += new System.EventHandler(this.btnCount_Click);
             // 
             // txtCountDown
             // 
@@ -67,6 +67,7 @@
             // Timer
             // 
             this.Timer.Interval = 1000;
+            this.Timer.Tick += new System.EventHandler(this.Timer_Tick);
             // 
             // Form1
             // 
@@ -75,7 +76,7 @@
             this.ClientSize = new System.Drawing.Size(294, 201);
             this.Controls.Add(this.txtCountDown);
             this.Controls.Add(this.btnCount);
-            this.Controls.Add(this.txtEdit);
+            this.Controls.Add(this.txtNum);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "Form1";
@@ -87,7 +88,7 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox txtEdit;
+        private System.Windows.Forms.TextBox txtNum;
         private System.Windows.Forms.Button btnCount;
         private System.Windows.Forms.TextBox txtCountDown;
         private System.Windows.Forms.Timer Timer;
