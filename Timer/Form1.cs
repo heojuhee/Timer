@@ -15,5 +15,10 @@ namespace Timer
         {
             InitializeComponent();
         }
+
+        private void txtCountDown_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

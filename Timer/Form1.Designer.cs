@@ -29,12 +29,68 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            this.txtEdit = new System.Windows.Forms.TextBox();
+            this.btnCount = new System.Windows.Forms.Button();
+            this.txtCountDown = new System.Windows.Forms.TextBox();
+            this.Timer = new System.Windows.Forms.Timer(this.components);
+            this.SuspendLayout();
+            // 
+            // txtEdit
+            // 
+            this.txtEdit.Location = new System.Drawing.Point(12, 12);
+            this.txtEdit.Name = "txtEdit";
+            this.txtEdit.Size = new System.Drawing.Size(274, 21);
+            this.txtEdit.TabIndex = 0;
+            this.txtEdit.Text = "txtNum";
+            this.txtEdit.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // btnCount
+            // 
+            this.btnCount.Location = new System.Drawing.Point(12, 39);
+            this.btnCount.Name = "btnCount";
+            this.btnCount.Size = new System.Drawing.Size(274, 102);
+            this.btnCount.TabIndex = 1;
+            this.btnCount.Text = "카운트다운";
+            this.btnCount.UseVisualStyleBackColor = true;
+            // 
+            // txtCountDown
+            // 
+            this.txtCountDown.Font = new System.Drawing.Font("굴림", 20F);
+            this.txtCountDown.Location = new System.Drawing.Point(12, 147);
+            this.txtCountDown.Name = "txtCountDown";
+            this.txtCountDown.ReadOnly = true;
+            this.txtCountDown.Size = new System.Drawing.Size(274, 38);
+            this.txtCountDown.TabIndex = 2;
+            this.txtCountDown.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtCountDown.TextChanged += new System.EventHandler(this.txtCountDown_TextChanged);
+            // 
+            // Timer
+            // 
+            this.Timer.Interval = 1000;
+            // 
+            // Form1
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Form1";
+            this.ClientSize = new System.Drawing.Size(294, 201);
+            this.Controls.Add(this.txtCountDown);
+            this.Controls.Add(this.btnCount);
+            this.Controls.Add(this.txtEdit);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.Name = "Form1";
+            this.Text = "타이머";
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
+
+        private System.Windows.Forms.TextBox txtEdit;
+        private System.Windows.Forms.Button btnCount;
+        private System.Windows.Forms.TextBox txtCountDown;
+        private System.Windows.Forms.Timer Timer;
     }
 }
 
